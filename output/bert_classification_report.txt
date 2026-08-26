@@ -1,276 +1,362 @@
 ================================================================================
   ClinicalBERT SURGICAL CASE CLASSIFIER — CLASSIFICATION REPORT
   Model    : emilyalsentzer/Bio_ClinicalBERT
-  Epochs   : 40    Batch size : 8    LR : 2e-05
-  Generated: 2026-08-26 09:41:21
+  Epochs   : 40  |  Batch : 16  |  LR : 2e-05
+  Generated: 2026-08-26 12:07:37
 ================================================================================
 
 SUMMARY
 --------------------------------------------------
   Total cases classified      : 2,290
-  Training reference entries  : 406  (35 categories)
-  Average ML confidence       : 82.1%
-  Low confidence (<50%)       : 208  ← review recommended
-  Accuracy vs VitalDB optype  : 77.7%  (1,779/2,290 correct)
+  Training entries (VitalDB)  : 0  case-level rows
+  Training entries (neuro)    : 406  department reference
+  Total training entries      : 406  (35 categories)
+  Average ML confidence       : 77.5%
+  Low confidence (<50%)       : 295  ← review recommended
+  Accuracy vs VitalDB optype  : 76.5%  (1,752/2,290 correct)
 
 PREDICTED CATEGORY DISTRIBUTION
 --------------------------------------------------
-  Colorectal                             496  ( 21.7%)
-  Others                                 338  ( 14.8%)
-  Major resection                        325  ( 14.2%)
-  Biliary/Pancreas                       311  ( 13.6%)
-  Stomach                                210  (  9.2%)
-  Minor resection                        197  (  8.6%)
-  Vascular                               115  (  5.0%)
-  Transplantation                         77  (  3.4%)
-  Breast                                  73  (  3.2%)
-  Hepatic                                 73  (  3.2%)
-  Thyroid                                 57  (  2.5%)
-  MiscellaneousOther                      16  (  0.7%)
-  CategoriesPG                             1  (  0.0%)
-  CraniTumorSkullBase                      1  (  0.0%)
+  Colorectal                             543  ( 23.7%)
+  Others                                 457  ( 20.0%)
+  Biliary/Pancreas                       329  ( 14.4%)
+  Major resection                        238  ( 10.4%)
+  Stomach                                179  (  7.8%)
+  Breast                                 120  (  5.2%)
+  Vascular                               117  (  5.1%)
+  Minor resection                         95  (  4.1%)
+  Transplantation                         89  (  3.9%)
+  Hepatic                                 64  (  2.8%)
+  Thyroid                                 59  (  2.6%)
 
 ACCURACY VS VITALDB GROUND TRUTH (optype)
 --------------------------------------------------
   Category                        Accuracy   Cases  Correct
   ----------------------------------------------------------
-  Biliary/Pancreas                   97.0%     236      229
-  Breast                             82.4%      74       61
-  Colorectal                         88.9%     495      440
-  Hepatic                            76.4%      89       68
-  Major resection                    93.3%     195      182
-  Minor resection                    63.1%     255      161
-  Others                             48.9%     564      276
-  Stomach                            94.1%     153      144
+  Biliary/Pancreas                   99.6%     236      235
+  Breast                             95.9%      74       71
+  Colorectal                         90.5%     495      448
+  Hepatic                            69.7%      89       62
+  Major resection                    84.1%     195      164
+  Minor resection                    35.3%     255       90
+  Others                             57.8%     564      326
+  Stomach                            92.2%     153      141
   Thyroid                           100.0%      46       46
-  Transplantation                    94.5%      73       69
-  Vascular                           93.6%     110      103
-  OVERALL                            77.7%    2290     1779
+  Transplantation                    95.9%      73       70
+  Vascular                           90.0%     110       99
+  OVERALL                            76.5%    2290     1752
 
 CONFIDENCE SCORE DISTRIBUTION
 --------------------------------------------------
-  <20%            0  (  0.0%)  
-  20-30%         15  (  0.7%)  
-  30-40%         68  (  3.0%)  █
-  40-50%        125  (  5.5%)  ██
-  50-60%        148  (  6.5%)  ███
-  60-70%        166  (  7.2%)  ███
-  70-80%        128  (  5.6%)  ██
-  80-90%        222  (  9.7%)  ████
-  90-100%      1418  ( 61.9%)  ██████████████████████████████
+  <20%            5  (  0.2%)  
+  20-30%         45  (  2.0%)  
+  30-40%         91  (  4.0%)  █
+  40-50%        154  (  6.7%)  ███
+  50-60%        207  (  9.0%)  ████
+  60-70%        173  (  7.6%)  ███
+  70-80%        274  ( 12.0%)  █████
+  80-90%        426  ( 18.6%)  █████████
+  90-100%       915  ( 40.0%)  ███████████████████
 
 LOW-CONFIDENCE CASES — MANUAL REVIEW RECOMMENDED
 --------------------------------------------------------------------------------
   OPNAME                                    PREDICTED CATEGORY         CONF%
   ------------------------------------------------------------------------------
-  Liver segmentectomy                       Hepatic                     20.0%
-  Excision                                  Others                      20.0%
-  Plication                                 Breast                      20.0%
-  Incision and drainage                     Colorectal                  20.0%
-  Percutaneous biopsy                       Transplantation             20.0%
-  Hemihepatectomy                           Hepatic                     20.0%
-  Thoracic sympathectomy                    CategoriesPG                20.0%
-  Exploratory laparotomy                    CraniTumorSkullBase         20.0%
-  Metastasectomy                            Minor resection             20.0%
-  Hernia repair                             Colorectal                  20.0%
-  Excision                                  Minor resection             20.0%
-  Excision                                  Minor resection             20.0%
-  Wide excision                             Major resection             20.0%
-  Metastasectomy                            Minor resection             20.0%
-  Excision                                  Breast                      20.0%
-  Transurethral resection of bladder tum    Minor resection             30.0%
-  Exploratory laparotomy                    Colorectal                  30.0%
-  Exploratory laparotomy                    Stomach                     30.0%
-  Wide excision                             Others                      30.0%
-  Excision                                  Major resection             30.0%
-  Exploratory laparotomy                    Others                      30.0%
-  Exploratory laparotomy                    Colorectal                  30.0%
-  Excision                                  Major resection             30.0%
-  Splenectomy                               Hepatic                     30.0%
-  Excision                                  Minor resection             30.0%
-  Lung wedge resection                      MiscellaneousOther          30.0%
-  Excision                                  Minor resection             30.0%
-  Nephrectomy                               Major resection             30.0%
-  Exploratory laparotomy                    Colorectal                  30.0%
-  Liver transplantation                     Biliary/Pancreas            30.0%
-  Nephrectomy                               Major resection             30.0%
-  Lung sgmentectomy                         MiscellaneousOther          30.0%
-  McDonald operation                        Others                      30.0%
-  Colostomy repair                          Colorectal                  30.0%
-  Embolectomy                               Vascular                    30.0%
-  Excision                                  Major resection             30.0%
-  Exploratory laparotomy                    Others                      30.0%
-  Biopsy                                    Breast                      30.0%
-  Excision                                  Major resection             30.0%
-  Exploratory laparotomy                    Major resection             30.0%
-  Colostomy                                 Minor resection             30.0%
-  Exploratory laparotomy                    Major resection             30.0%
-  Metastasectomy                            Major resection             30.0%
-  Exploratory laparotomy                    Colorectal                  30.0%
-  Exploratory laparotomy                    Major resection             30.0%
-  Excision                                  Minor resection             30.0%
-  Exploratory laparotomy                    Major resection             30.0%
-  Excision                                  Major resection             30.0%
-  Excision                                  MiscellaneousOther          30.0%
-  Nephrectomy                               Major resection             30.0%
-  Metastasectomy                            Major resection             30.0%
-  Exploratory laparotomy                    Colorectal                  30.0%
-  Splenectomy                               Hepatic                     30.0%
-  Excision                                  Others                      30.0%
-  Wide excision                             Breast                      30.0%
-  Excision                                  Major resection             30.0%
-  Bleeding control                          Hepatic                     30.0%
-  Nephrectomy                               Major resection             30.0%
-  Excision                                  Others                      30.0%
-  Exploratory laparotomy                    Major resection             30.0%
-  Exploratory laparotomy                    Transplantation             30.0%
-  Bleeding control                          Stomach                     30.0%
-  Exploratory laparotomy                    Colorectal                  30.0%
-  Bleeding control                          Stomach                     30.0%
-  Low anterior resection                    Colorectal                  30.0%
-  Excision                                  Others                      30.0%
-  Excision                                  Others                      30.0%
-  Lung sgmentectomy                         MiscellaneousOther          30.0%
-  Bleeding control                          Stomach                     30.0%
-  Exploratory laparotomy                    Major resection             30.0%
-  Exploratory laparotomy                    Biliary/Pancreas            30.0%
-  Nephrectomy                               Major resection             30.0%
-  Cesarean section                          MiscellaneousOther          30.0%
-  Nephrectomy                               Major resection             30.0%
-  Exploratory laparotomy                    Colorectal                  30.0%
-  Bleeding control                          Major resection             30.0%
-  Metastasectomy                            Major resection             30.0%
-  Exploratory laparotomy                    Colorectal                  30.0%
-  Excision                                  Minor resection             30.0%
-  Metastasectomy                            Major resection             30.0%
-  Lung wedge resection                      Major resection             30.0%
-  Modified radical neck dissection          Major resection             30.0%
-  Exploratory laparotomy                    Biliary/Pancreas            30.0%
-  Excision                                  Others                      40.0%
-  Excision                                  Major resection             40.0%
-  Hemicolectomy                             Colorectal                  40.0%
-  Lung lobectomy                            Minor resection             40.0%
-  Extended hemihepatectomy                  Hepatic                     40.0%
-  Excision                                  Breast                      40.0%
-  Liver transplantation                     Transplantation             40.0%
-  Anterior resection                        Stomach                     40.0%
-  Debulking surgery                         Colorectal                  40.0%
-  Wide excision                             Major resection             40.0%
-  Excision                                  Major resection             40.0%
-  Excision                                  Breast                      40.0%
-  Exploratory laparotomy                    Others                      40.0%
-  Exploratory laparotomy                    Stomach                     40.0%
-  Exploratory laparotomy                    Others                      40.0%
-  Anterior resection                        Stomach                     40.0%
-  Debulking surgery                         Others                      40.0%
-  Lung wedge resection                      MiscellaneousOther          40.0%
-  Hernia repair                             Colorectal                  40.0%
-  Excision                                  Major resection             40.0%
-  Excision                                  Minor resection             40.0%
-  Lung lobectomy                            Minor resection             40.0%
-  Lung lobectomy                            Minor resection             40.0%
-  Anterior resection                        Stomach                     40.0%
-  Metastasectomy                            Minor resection             40.0%
-  Excision                                  Others                      40.0%
-  Exploratory laparotomy                    Major resection             40.0%
-  Exploratory laparotomy                    Major resection             40.0%
-  Liver transplantation                     Transplantation             40.0%
-  Excision                                  Others                      40.0%
-  Splenectomy                               Hepatic                     40.0%
-  Wide excision                             Minor resection             40.0%
-  Excision                                  Others                      40.0%
-  Exploratory laparotomy                    Colorectal                  40.0%
-  Hernia repair                             Stomach                     40.0%
-  Hemicolectomy                             Colorectal                  40.0%
-  Lung sgmentectomy                         Others                      40.0%
-  Excision                                  Others                      40.0%
-  Extended hemicolectomy                    Colorectal                  40.0%
-  Metastasectomy                            Colorectal                  40.0%
-  Exploratory laparotomy                    Colorectal                  40.0%
-  Lung sgmentectomy                         Others                      40.0%
-  Lung wedge resection                      MiscellaneousOther          40.0%
-  Salpingo-oophorectomy                     Colorectal                  40.0%
-  Lung wedge resection                      MiscellaneousOther          40.0%
-  Salpingo-oophorectomy                     Colorectal                  40.0%
-  Excision                                  Minor resection             40.0%
-  Total colectomy                           Colorectal                  40.0%
-  Debulking surgery                         Others                      40.0%
-  Excision                                  Major resection             40.0%
-  Metastasectomy                            Minor resection             40.0%
-  Excision                                  Major resection             40.0%
-  Exploratory laparotomy                    Colorectal                  40.0%
-  Excision                                  Breast                      40.0%
-  Excision                                  Major resection             40.0%
-  Excision                                  Major resection             40.0%
-  Lung wedge resection                      Major resection             40.0%
-  Lung wedge resection                      Colorectal                  40.0%
-  Colostomy                                 Colorectal                  40.0%
-  Excision                                  Others                      40.0%
-  Hemicolectomy                             Colorectal                  40.0%
-  Incisional hernia repair                  Colorectal                  40.0%
-  Exploratory laparotomy                    Stomach                     40.0%
-  Wide excision                             Major resection             40.0%
-  Bleeding control                          Others                      40.0%
-  Total colectomy                           Colorectal                  40.0%
-  Sternal fixation                          Others                      40.0%
-  Exploratory laparotomy                    Colorectal                  40.0%
-  Excision                                  Major resection             40.0%
-  Biopsy                                    Others                      40.0%
-  Lung wedge resection                      Major resection             40.0%
-  Biopsy                                    Major resection             40.0%
-  Hernia repair                             Stomach                     40.0%
-  Excision                                  Major resection             40.0%
-  Diagnostic laparoscopy                    Biliary/Pancreas            40.0%
-  Exploratory laparotomy                    Major resection             40.0%
-  Bullectomy                                Others                      40.0%
-  Hernia repair                             Stomach                     40.0%
-  Hernia repair                             Stomach                     40.0%
-  Lung sgmentectomy                         Others                      40.0%
-  Exploratory laparotomy                    Major resection             40.0%
-  Lung sgmentectomy                         Minor resection             40.0%
-  Salpingo-oophorectomy                     Major resection             40.0%
-  Ileostomy                                 Major resection             40.0%
-  Excision                                  Breast                      40.0%
-  Excision                                  Major resection             40.0%
-  Excision                                  Others                      40.0%
-  Removal of continuous ambulatory perit    Vascular                    40.0%
-  Salpingo-oophorectomy                     Major resection             40.0%
-  Adrenalectomy                             Major resection             40.0%
-  Biopsy                                    Breast                      40.0%
-  Exploration                               Major resection             40.0%
-  Debulking surgery                         Stomach                     40.0%
-  Hernia repair                             Colorectal                  40.0%
-  Hernia repair                             Stomach                     40.0%
-  Fundoplication                            Stomach                     40.0%
-  Metastasectomy                            Minor resection             40.0%
-  Excision                                  Breast                      40.0%
-  Excision                                  Others                      40.0%
-  Exploratory laparotomy                    Major resection             40.0%
-  Lung lobectomy                            Colorectal                  40.0%
-  Lung lobectomy                            Major resection             40.0%
-  Anterior resection                        Stomach                     40.0%
-  Excision                                  Others                      40.0%
-  Exploratory laparotomy                    Major resection             40.0%
-  Delorme's operation                       Colorectal                  40.0%
-  Salpingo-oophorectomy                     Colorectal                  40.0%
-  Bleeding control                          Others                      40.0%
-  Excision                                  Minor resection             40.0%
-  Pyeloplasty                               Minor resection             40.0%
-  Lung segmentectomy                        Minor resection             40.0%
-  Excision                                  Others                      40.0%
-  Excision                                  Minor resection             40.0%
-  Exploratory laparotomy                    Others                      40.0%
-  Excision                                  Major resection             40.0%
-  Liver transplantation                     Transplantation             40.0%
-  Lung wedge resection                      Colorectal                  40.0%
-  Biopsy                                    Minor resection             40.0%
-  Excision                                  Others                      40.0%
-  Biopsy                                    Minor resection             40.0%
-  Exploratory laparotomy                    Major resection             40.0%
-  Splenectomy                               Hepatic                     40.0%
-  Excision                                  Others                      40.0%
-  Excision                                  Major resection             40.0%
-  Lung wedge resection                      Minor resection             40.0%
+  Excision                                  Vascular                    14.6%
+  Excision                                  Hepatic                     16.1%
+  Excision                                  Breast                      17.8%
+  Embolectomy                               Hepatic                     19.0%
+  Biopsy                                    Major resection             19.1%
+  Ligation and stripping                    Transplantation             20.3%
+  Excision                                  Biliary/Pancreas            20.4%
+  Excision                                  Major resection             20.6%
+  Excision                                  Others                      21.0%
+  Excision                                  Others                      21.0%
+  Excision                                  Others                      21.0%
+  Excision                                  Others                      21.0%
+  Excision                                  Others                      21.0%
+  Excision                                  Others                      21.0%
+  Excision                                  Others                      21.0%
+  Excision                                  Others                      21.0%
+  Excision                                  Others                      21.0%
+  Excision                                  Others                      22.7%
+  Metastasectomy                            Breast                      23.0%
+  Excision                                  Biliary/Pancreas            23.7%
+  Lung lobectomy                            Major resection             23.8%
+  Metastasectomy                            Minor resection             24.4%
+  Exploratory laparotomy                    Major resection             24.6%
+  Hartmann procedure                        Major resection             24.7%
+  Metastasectomy                            Minor resection             24.7%
+  Excision                                  Others                      24.8%
+  Excision                                  Others                      24.8%
+  Excision                                  Others                      24.8%
+  Lung lobectomy                            Others                      25.8%
+  Excision                                  Stomach                     25.8%
+  Biopsy                                    Others                      26.1%
+  Biopsy                                    Others                      26.1%
+  Exploratory laparotomy                    Others                      26.6%
+  Exploratory laparotomy                    Others                      26.6%
+  Exploratory laparotomy                    Others                      26.6%
+  Excision                                  Major resection             26.7%
+  Lung wedge resection                      Others                      26.9%
+  Lung wedge resection                      Others                      26.9%
+  Excision                                  Breast                      27.1%
+  Excision                                  Breast                      27.8%
+  Excision                                  Breast                      27.8%
+  Excision                                  Breast                      27.8%
+  Lung wedge resection                      Transplantation             27.9%
+  Hernia repair                             Vascular                    28.0%
+  Exploratory laparotomy                    Major resection             28.6%
+  Biopsy                                    Major resection             28.7%
+  Biopsy                                    Major resection             28.7%
+  Lung lobectomy                            Major resection             29.1%
+  Metastasectomy                            Colorectal                  29.7%
+  Metastasectomy                            Colorectal                  29.7%
+  Excision                                  Minor resection             30.1%
+  Hernia repair                             Colorectal                  30.1%
+  Excision                                  Others                      30.5%
+  Excision                                  Others                      30.7%
+  Metastasectomy                            Minor resection             31.2%
+  Removal of continuous ambulatory perit    Vascular                    31.2%
+  Exploratory laparotomy                    Major resection             31.5%
+  Excision                                  Others                      31.8%
+  Excision                                  Others                      31.8%
+  Exploration                               Major resection             31.9%
+  Closure of wound                          Others                      31.9%
+  Staging operation                         Major resection             32.0%
+  Bullectomy                                Major resection             32.1%
+  Metastasectomy                            Others                      32.1%
+  Excision                                  Others                      32.3%
+  Nephrectomy                               Transplantation             32.4%
+  Nephrectomy                               Transplantation             32.4%
+  Nephrectomy                               Transplantation             32.4%
+  Nephrectomy                               Transplantation             32.4%
+  Nephrectomy                               Transplantation             32.4%
+  Nephrectomy                               Transplantation             32.4%
+  Excision                                  Others                      32.5%
+  Lung lobectomy                            Major resection             32.5%
+  Excision                                  Major resection             32.6%
+  Metastasectomy                            Minor resection             33.0%
+  Metastasectomy                            Minor resection             33.0%
+  Lung wedge resection                      Major resection             33.2%
+  Excision                                  Others                      33.2%
+  Lung wedge resection                      Major resection             33.2%
+  Excision                                  Others                      33.2%
+  Lung lobectomy                            Others                      33.4%
+  Exploratory laparotomy                    Biliary/Pancreas            33.6%
+  Exploratory laparotomy                    Biliary/Pancreas            33.6%
+  Excision                                  Stomach                     33.8%
+  Exploratory laparotomy                    Others                      33.9%
+  Liver segmentectomy                       Hepatic                     34.2%
+  Lung lobectomy                            Major resection             34.4%
+  Liver segmentectomy                       Hepatic                     34.6%
+  Biopsy                                    Breast                      34.7%
+  Lung wedge resection                      Others                      34.8%
+  Metastasectomy                            Minor resection             34.9%
+  Bleeding control                          Transplantation             35.2%
+  Hernia repair                             Others                      35.3%
+  Hernia repair                             Others                      35.3%
+  Exploratory laparotomy                    Colorectal                  35.3%
+  Hernia repair                             Others                      35.3%
+  Lung wedge resection                      Major resection             35.7%
+  Lung wedge resection                      Major resection             35.7%
+  Bullectomy                                Minor resection             36.0%
+  Bullectomy                                Minor resection             36.0%
+  Bullectomy                                Minor resection             36.0%
+  Bullectomy                                Minor resection             36.0%
+  Metastasectomy                            Minor resection             36.2%
+  Excision                                  Major resection             36.4%
+  Lung wedge resection                      Major resection             36.6%
+  Debulking surgery                         Others                      36.8%
+  Exploratory laparotomy                    Biliary/Pancreas            36.8%
+  Exploratory laparotomy                    Biliary/Pancreas            36.9%
+  Excision                                  Breast                      36.9%
+  Exploratory laparotomy                    Biliary/Pancreas            36.9%
+  Lung sgmentectomy                         Major resection             37.1%
+  Excision                                  Others                      37.3%
+  Excision                                  Others                      37.4%
+  Metastasectomy                            Minor resection             37.4%
+  Incisional hernia repair                  Biliary/Pancreas            37.5%
+  Salpingo-oophorectomy                     Minor resection             37.6%
+  Hernia repair                             Colorectal                  37.7%
+  Thoracic sympathectomy                    Others                      37.8%
+  Transurethral resection of bladder tum    Others                      37.9%
+  Exploratory laparotomy                    Others                      38.0%
+  Nephrectomy                               Transplantation             38.1%
+  Metastasectomy                            Minor resection             38.1%
+  Excision                                  Stomach                     38.3%
+  Metastasectomy                            Minor resection             38.4%
+  Metastasectomy                            Minor resection             38.4%
+  Metastasectomy                            Minor resection             38.4%
+  Nephrectomy                               Transplantation             38.5%
+  Fistulectomy                              Stomach                     38.5%
+  Fistulectomy                              Stomach                     38.5%
+  Lung wedge resection                      Others                      38.6%
+  Hernia repair                             Vascular                    38.8%
+  Plication                                 Breast                      39.0%
+  Wound revision                            Colorectal                  39.1%
+  Transurethral resection of bladder tum    Major resection             39.2%
+  Arteriovenous fistula                     Breast                      39.2%
+  Excision                                  Major resection             39.5%
+  Exploratory laparotomy                    Others                      39.6%
+  Excision                                  Colorectal                  39.8%
+  Salpingo-oophorectomy                     Minor resection             39.8%
+  Excision                                  Biliary/Pancreas            39.9%
+  Exploratory laparotomy                    Others                      39.9%
+  Diagnostic laparoscopy                    Others                      40.1%
+  Exploratory laparotomy                    Major resection             40.1%
+  Sternal fixation                          Others                      40.4%
+  Hernia repair                             Stomach                     40.4%
+  Bleeding control                          Transplantation             40.4%
+  Liver transplantation                     Transplantation             40.5%
+  Exploratory laparotomy                    Others                      40.5%
+  Incision and drainage                     Vascular                    40.6%
+  Metastasectomy                            Major resection             40.7%
+  Metastasectomy                            Biliary/Pancreas            40.7%
+  Metastasectomy                            Major resection             40.7%
+  Metastasectomy                            Biliary/Pancreas            40.7%
+  Metastasectomy                            Biliary/Pancreas            40.7%
+  Macroplastique injection                  Colorectal                  40.8%
+  Lung wedge resection                      Others                      40.8%
+  Exploratory laparotomy                    Colorectal                  40.9%
+  Excision                                  Others                      40.9%
+  Exploratory laparotomy                    Colorectal                  40.9%
+  Exploratory laparotomy                    Colorectal                  40.9%
+  Excision                                  Others                      40.9%
+  Excision                                  Others                      41.3%
+  Lung lobectomy                            Others                      41.4%
+  Lung lobectomy                            Others                      41.4%
+  Incisional hernia repair                  Colorectal                  41.5%
+  Transurethral resection of bladder tum    Minor resection             41.5%
+  Transurethral resection of bladder tum    Minor resection             41.5%
+  Metastasectomy                            Breast                      41.6%
+  Excision                                  Colorectal                  41.6%
+  Excision                                  Breast                      41.8%
+  Excision                                  Colorectal                  42.1%
+  Excision                                  Colorectal                  42.1%
+  Excision                                  Colorectal                  42.1%
+  Exploratory laparotomy                    Transplantation             42.2%
+  Low anterior resection                    Colorectal                  42.2%
+  Hernia repair                             Others                      42.2%
+  Hernia repair                             Others                      42.2%
+  Hernia repair                             Others                      42.2%
+  Metastasectomy                            Major resection             42.4%
+  Metastasectomy                            Major resection             42.4%
+  Hemihepatectomy                           Hepatic                     42.4%
+  Metastasectomy                            Minor resection             42.5%
+  Adrenalectomy                             Others                      42.5%
+  Lung lobectomy                            Major resection             42.5%
+  Hernia repair                             Major resection             42.5%
+  Ligation and stripping                    Vascular                    42.6%
+  McDonald operation                        Others                      42.6%
+  Hemicolectomy                             Colorectal                  42.9%
+  Pelvic tumorectomy                        Major resection             42.9%
+  Extended hemihepatectomy                  Colorectal                  42.9%
+  Pelvic tumorectomy                        Major resection             42.9%
+  Liver sectionectomy                       Hepatic                     42.9%
+  Transurethral resection of bladder tum    Others                      43.0%
+  Lung bilobectomy                          Others                      43.2%
+  Modified radical neck dissection          Thyroid                     43.4%
+  Adrenalectomy                             Others                      43.4%
+  Adrenalectomy                             Others                      43.4%
+  Colostomy                                 Colorectal                  43.5%
+  Exploratory laparotomy                    Major resection             43.5%
+  Lung wedge resection                      Others                      43.6%
+  Oophorectomy                              Major resection             43.7%
+  Orchiectomy                               Colorectal                  43.8%
+  Lung lobectomy                            Major resection             44.0%
+  Salpingo-oophorectomy                     Minor resection             44.1%
+  Excision                                  Major resection             44.2%
+  Excision                                  Colorectal                  44.3%
+  Lung lobectomy                            Others                      44.4%
+  Exploratory laparotomy                    Others                      44.4%
+  Lung lobectomy                            Others                      44.4%
+  Liver transplantation                     Transplantation             44.5%
+  Exploratory laparotomy                    Others                      44.6%
+  Transurethral resection of bladder tum    Minor resection             44.6%
+  Transurethral resection of bladder tum    Minor resection             44.6%
+  Transurethral resection of bladder tum    Minor resection             44.6%
+  Diagnostic laparoscopy                    Biliary/Pancreas            44.6%
+  Lung wedge resection                      Others                      44.6%
+  Transurethral resection of bladder tum    Minor resection             44.6%
+  Transurethral resection of bladder tum    Minor resection             44.6%
+  Metastasectomy                            Minor resection             44.7%
+  Hartmann procedure                        Colorectal                  44.8%
+  Lung sgmentectomy                         Major resection             45.0%
+  Adrenalectomy                             Major resection             45.1%
+  Oophorectomy                              Colorectal                  45.1%
+  Adrenalectomy                             Major resection             45.1%
+  Transurethral resection of bladder tum    Others                      45.1%
+  Colostomy                                 Major resection             45.2%
+  Lung lobectomy                            Others                      45.3%
+  Mediastinal lymph node dissection         Others                      45.3%
+  Lung lobectomy                            Others                      45.3%
+  Lung lobectomy                            Others                      45.3%
+  Salpingo-oophorectomy                     Minor resection             45.3%
+  Metastasectomy                            Major resection             45.5%
+  Metastasectomy                            Major resection             45.5%
+  Liver segmentectomy                       Hepatic                     45.6%
+  Exploratory laparotomy                    Others                      45.7%
+  Excision                                  Colorectal                  45.8%
+  Biopsy                                    Others                      45.8%
+  Bullectomy                                Minor resection             46.0%
+  Excision                                  Stomach                     46.3%
+  Staging laparotomy                        Minor resection             46.3%
+  Metastasectomy                            Others                      46.5%
+  Metastasectomy                            Others                      46.5%
+  Hernia repair                             Biliary/Pancreas            46.7%
+  Lung sgmentectomy                         Minor resection             46.9%
+  Lung sgmentectomy                         Minor resection             46.9%
+  Exploratory laparotomy                    Major resection             47.0%
+  Metastasectomy                            Others                      47.0%
+  Metastasectomy                            Others                      47.0%
+  Exploratory laparotomy                    Others                      47.1%
+  Ileostomy                                 Colorectal                  47.3%
+  Nephrectomy                               Transplantation             47.3%
+  Adrenalectomy                             Major resection             47.4%
+  Metastasectomy                            Breast                      47.4%
+  Exploratory laparotomy                    Others                      47.5%
+  Hemihepatectomy                           Hepatic                     47.5%
+  Hemihepatectomy                           Hepatic                     47.5%
+  Hemihepatectomy                           Hepatic                     47.5%
+  Hemihepatectomy                           Hepatic                     47.5%
+  Hemihepatectomy                           Hepatic                     47.5%
+  Hemihepatectomy                           Hepatic                     47.5%
+  Hemihepatectomy                           Hepatic                     47.5%
+  Hemihepatectomy                           Hepatic                     47.5%
+  Transurethral resection of bladder tum    Minor resection             47.6%
+  Excision                                  Others                      47.6%
+  Transurethral resection of bladder tum    Minor resection             47.6%
+  Transurethral resection of bladder tum    Minor resection             47.6%
+  Sleeve lobectomy                          Others                      47.8%
+  Lung sgmentectomy                         Minor resection             47.8%
+  Biopsy                                    Others                      48.0%
+  Biopsy                                    Others                      48.0%
+  Diagnostic laparoscopy                    Others                      48.0%
+  Exploratory laparotomy                    Colorectal                  48.1%
+  Removal of complicated graft              Biliary/Pancreas            48.3%
+  Liver segmentectomy                       Hepatic                     48.4%
+  Exploratory laparotomy                    Major resection             48.5%
+  Salpingo-oophorectomy                     Colorectal                  48.5%
+  Salpingo-oophorectomy                     Colorectal                  48.5%
+  Salpingo-oophorectomy                     Colorectal                  48.5%
+  Empyemectomy                              Others                      48.6%
+  Incisional hernia repair                  Colorectal                  49.0%
+  Exploratory laparotomy                    Others                      49.1%
+  Lung lobectomy                            Major resection             49.1%
+  Exploratory laparotomy                    Colorectal                  49.2%
+  Exploratory laparotomy                    Colorectal                  49.2%
+  Exploratory laparotomy                    Colorectal                  49.2%
+  Lung wedge resection                      Others                      49.3%
+  Exploratory laparotomy                    Colorectal                  49.4%
+  Lung segmentectomy                        Minor resection             49.4%
+  Lung lobectomy                            Others                      49.6%
+  Exploratory laparotomy                    Others                      49.6%
+  Lung lobectomy                            Others                      49.6%
+  Liver transplantation                     Transplantation             49.7%
+  Lung lobectomy                            Major resection             49.7%
+  Lung wedge resection                      Others                      49.8%
+  Metastasectomy                            Breast                      49.8%
 
 ================================================================================
   END OF REPORT
