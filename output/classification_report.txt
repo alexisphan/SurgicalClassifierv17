@@ -1,0 +1,86 @@
+================================================================================
+  ANESTHESIA-ORIENTED SURGICAL TAXONOMY — CLASSIFICATION REPORT
+  Generated : 2026-08-24 19:15:40
+================================================================================
+
+SUMMARY
+----------------------------------------
+  Total cases classified      : 2,290
+  Average ML confidence       : 69.4%
+  Low confidence (<50%)       : 4  ← review recommended
+
+LEVEL 1 — OPERATIVE MAGNITUDE
+--------------------------------------------------
+  Major                                           1711  ( 74.7%)
+  Minor                                            579  ( 25.3%)
+
+LEVEL 2 — SURGICAL DOMAIN
+--------------------------------------------------
+  Abdominal / GI                                  1105  ( 48.3%)
+  Soft Tissue / Access / Misc                      432  ( 18.9%)
+  Thoracic                                         279  ( 12.2%)
+  Neuro / Spine                                    183  (  8.0%)
+  Vascular                                         108  (  4.7%)
+  ENT / Head & Neck                                108  (  4.7%)
+  Urology                                           75  (  3.3%)
+
+LEVEL 3 — SURGICAL APPROACH
+--------------------------------------------------
+  Open                                            1356  ( 59.2%)
+  Laparoscopic                                     822  ( 35.9%)
+  Robotic                                          112  (  4.9%)
+
+LEVEL 4 — PROCEDURE SUBTYPE
+--------------------------------------------------
+  Other Procedure                                  611  ( 26.7%)
+  Colectomy / Bowel Resection                      514  ( 22.4%)
+  Hepatobiliary / Pancreatic Resection             273  ( 11.9%)
+  Thoracic Resection                               224  (  9.8%)
+  Gastric Resection                                125  (  5.5%)
+  Cystoscopy / TURBT                               113  (  4.9%)
+  Craniotomy                                       102  (  4.5%)
+  Vascular Reconstruction                           96  (  4.2%)
+  Access / Drainage Procedures                      77  (  3.4%)
+  Breast Surgery                                    64  (  2.8%)
+  Thyroid / Parathyroid                             54  (  2.4%)
+  Transplant / Major Reconstruction                 29  (  1.3%)
+  Bariatric Surgery                                  6  (  0.3%)
+  Spine Fusion / Decompression                       2  (  0.1%)
+
+LEVEL 5 — POSITIONING (from modifiers)
+--------------------------------------------------
+  Supine                                          1315  ( 57.4%)
+  Lateral Decubitus                                434  ( 19.0%)
+  Lithotomy                                        386  ( 16.9%)
+  Prone                                             86  (  3.8%)
+  Trendelenburg                                     60  (  2.6%)
+  Lateral Kidney                                     5  (  0.2%)
+  Sitting                                            4  (  0.2%)
+
+LEVEL 5 — MALIGNANCY STATUS
+--------------------------------------------------
+  Malignancy                                      1148  ( 50.1%)
+  Benign/Non-malignant                            1142  ( 49.9%)
+
+LEVEL 6 — ESTIMATED CASE DURATION
+--------------------------------------------------
+  1-3hr                                            663  ( 29.0%)
+  2-4hr                                            636  ( 27.8%)
+  <2hr                                             474  ( 20.7%)
+  2-5hr                                            274  ( 12.0%)
+  >6hr                                             128  (  5.6%)
+  3-6hr                                            111  (  4.8%)
+  <1hr                                               4  (  0.2%)
+
+LOW-CONFIDENCE CASES — MANUAL REVIEW RECOMMENDED
+--------------------------------------------------------------------------------
+  OPNAME                               LEVEL 2 DOMAIN          LEVEL 4 SUBTYPE     CONF%
+--------------------------------------------------------------------------------
+  Decortication                        Soft Tissue / Access …  Thoracic Resection  49.4%
+  Embolectomy                          Vascular                Vascular Reconstr…  49.7%
+  Cesarean section                     Abdominal / GI          Other Procedure     49.7%
+  Salpingo-oophorectomy                Abdominal / GI          Other Procedure     49.9%
+
+================================================================================
+  END OF REPORT
+================================================================================

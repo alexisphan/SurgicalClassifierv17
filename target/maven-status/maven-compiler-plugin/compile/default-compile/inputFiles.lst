@@ -1,0 +1,10 @@
+C:\Users\Lexis\Downloads\SurgicalClassifier_v16_domain_fix\SurgicalClassifier\src\main\java\com\surgical\classifier\CsvLoader.java
+C:\Users\Lexis\Downloads\SurgicalClassifier_v16_domain_fix\SurgicalClassifier\src\main\java\com\surgical\classifier\DurationLookup.java
+C:\Users\Lexis\Downloads\SurgicalClassifier_v16_domain_fix\SurgicalClassifier\src\main\java\com\surgical\classifier\FuzzyMatcher.java
+C:\Users\Lexis\Downloads\SurgicalClassifier_v16_domain_fix\SurgicalClassifier\src\main\java\com\surgical\classifier\Main.java
+C:\Users\Lexis\Downloads\SurgicalClassifier_v16_domain_fix\SurgicalClassifier\src\main\java\com\surgical\classifier\ProcedureRecord.java
+C:\Users\Lexis\Downloads\SurgicalClassifier_v16_domain_fix\SurgicalClassifier\src\main\java\com\surgical\classifier\ReportWriter.java
+C:\Users\Lexis\Downloads\SurgicalClassifier_v16_domain_fix\SurgicalClassifier\src\main\java\com\surgical\classifier\SurgicalCase.java
+C:\Users\Lexis\Downloads\SurgicalClassifier_v16_domain_fix\SurgicalClassifier\src\main\java\com\surgical\classifier\TaxonomyClassifier.java
+C:\Users\Lexis\Downloads\SurgicalClassifier_v16_domain_fix\SurgicalClassifier\src\main\java\com\surgical\classifier\TfIdfVectorizer.java
+C:\Users\Lexis\Downloads\SurgicalClassifier_v16_domain_fix\SurgicalClassifier\src\main\java\com\surgical\classifier\WekaClassifier.java
